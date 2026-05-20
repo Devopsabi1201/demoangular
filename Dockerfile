@@ -21,7 +21,7 @@ FROM nginx:alpine
 
 # Copy Angular build output to Nginx html directory
 # IMPORTANT: Replace <project-name> with the actual folder name inside dist/
-COPY --from=build /app/dist/app /usr/share/nginx/html
+COPY --from=build /app/dist/demoangular  /usr/share/nginx/html
 
 # Optional: custom Nginx config for Angular routing
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
