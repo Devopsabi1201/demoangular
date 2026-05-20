@@ -20,7 +20,7 @@ RUN npm run build --prod
 FROM nginx:alpine
 
 # Copy built Angular files from Stage 1
-COPY --from=build /app/dist/<your-angular-app-name> /usr/share/nginx/html
+COPY --from=build /app/dist/demoangular /usr/share/nginx/html
 
 # Optional: custom Nginx config for Angular routing
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
